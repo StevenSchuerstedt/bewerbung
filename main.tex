@@ -1,0 +1,180 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.90]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Timothy Steven}{Schürstedt}
+%\title{curriculum vitae}                               % optional, remove / comment the line if not wanted
+\address{Gustav-Schulenburg-Str. 52}{76189 Karlsruhe}{Germany}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+49176 4711 8614}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{steven@schuerstedt.com}                               % optional, remove / comment the line if not wanted
+\homepage{www.steven.schuerstedt.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%\iffalse
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+% arguments 3 to 6 can be left empty
+\section{Education}
+\cventry{2021}{ University of Zürich / ETH}{MSc Computer Science}{Semester abroad}{}{} 
+\cventry{2019--today}{ Karlsruher Institute of Technology}{MSc Computer Science}{current GPA 1.4 (Germany)}{}{} 
+\cvlistitem{focus on computer graphics and physics}
+\cvlistitem{lectures on GPU Computing with OpenCL, offline and online rendering, machine learning with python}
+\cventry{2018--2019}{Musikhochschule Karlsruhe}{MA Musikinformatik}{}{}{}
+\cvlistitem{lectures on using machine learning in music, digital signal processing}
+\cventry{2014--2018}{University Koblenz-Landau}{BSc Computational Visualistics}{GPA 2.3 (Germany)}{}{}
+\cvlistitem{Project on building a smartroom with Arduino and Arduino IDE }
+\cvlistitem{Bachelor Thesis: computational composition using cellular automata and lindenmayer systems}
+\cventry{2006--2014}{Paul-Klee Gymnasium Gersthofen}{}{Abitur}{}{} 
+
+
+\section{Work Experience}
+
+\cventry{2018--today}{Student Assistant at the Institut of Applied Computer Science (KIT)}{}{software developer in C++}{}{}
+\cvlistitem{paper contribution at the Forum Bauinformatik Berlin, "Use of VR-Technologies in BIM / GIS"}
+\cvlistitem{working with a large codebase, porting old code to modern OpenGL, optimization of the graphics engine using OpenGL and Vulkan}
+\cvlistitem{extending the graphics engine to Virtual Reality using OpenVR and the HTC Vive}
+\cventry{2018}{Piano Teacher at the musicschool of Winningen}{}{}{}{}
+\cventry{2017--2018}{Student Assistant at the Institut West (University Koblenz)}{}{support of the lecture database fundamentals}{}{}
+\cventry{2016--2017}{Tutor in maths and computer science at Lernstudio Barbarossa Koblenz}{}{}{}{}
+
+%\cventry{2018}{Studentische Hilfskraft am Institut für Managment}{Dr. Kornelia van der Beek}{Recherchearbeiten für das Projekt Accelerating Entrepeneurship}{}{}
+
+
+
+\section{Current Projects in 2020}
+\begin{cvcolumns}
+ \cvcolumn{\textbf{8-Bit Computer} \link[\textit{[\,link]\,}]{https://steven.schuerstedt.com/?page_id=524} }{developing a Von-Neumann 8-Bit computer architecture on breadboards, using 7400-series ICs}
+
+
+ \cvcolumn{\textbf{StevieJump} \link[\textit{[\,link]\,}]{https://steven.schuerstedt.com/?page_id=343}}{2D real-time rendering application, using OpenGL and C++, procedural level generation with cellular automata  }
+
+ \cvcolumn{\textbf{StevieTracer} \link[\textit{[\,link]\,}]{https://steven.schuerstedt.com/?page_id=327}}{Monte-Carlo Pathtracer in C++ using Next-Event-Estimation and Russian Roulette, supporting diffuse and specular spheres }
+ 
+\end{cvcolumns}
+
+%\section{Recent projects}
+%\cventry{}{8-Bit computer}{}{development of a 8-bit computer architecture using breadboards and basic TTL chips}{}{}
+%\cventry{}{Stevie Jump}{}{Development of a interactive, real time 2D application using OpenGL and C++}{}{}
+%\cventry{}{Stevie Trace}{}{Development of a offline path tracer using Monte Carlo Light Transport}{}{}
+\
+%\subsection{Musikalische Laufbahn}
+%\cventry{2014--2016}{Klavierunterricht an der Universität Koblenz-Landau und an der Musikschule %Koblenz}{Maria Streltsova und Egon Dämmer}{}{}{}
+%\cventry{2016--heute}{Klavierunterricht an der Musikschule Winningen}{Agapi Triantafyllidi}{}{}%{}
+%\cventry{Juli 2016}{Teilnahme am Internationalen Meisterkurs für Klavier in Worms}{Prof. Josef %Scherrer und Prof. Manfred Aust}{}{}{}
+%
+%\cventry{2017--heute}{Vertretungslehrer in der Klavierklasse Triantafyllidi an der Musikschule %Winningen}{}{}{}{}
+
+\section{Other Activities}
+\cventry{2018 -- today}{Long Endurance Sports}{}{Marathons, spring distance triathlon}{}{}
+%\cvlistitem{multiple Marathons, sprint distance triathlon}
+\cventry{2014 -- today}{Piano, Guitar and Singing}{}{Playing classical piano literature, e.g. Chopin, Liszt, Scriabin}{}{}
+%\cvlistitem{Participant of the international Piano Master Class in Worms}
+
+\section{Languages}
+
+
+\begin{cvcolumns}
+ \cvcolumn{\textbf{English}}{Fluent (B2+/C1)}
+
+
+ \cvcolumn{\textbf{France}}{Advanced (B1+)  }
+
+ \cvcolumn{\textbf{German}}{Native speaker }
+ 
+\end{cvcolumns}
+
+%\cvitemwithcomment{English}{Fluent (B2+/C1)}{}
+%\cvitemwithcomment{France}{Advanced (B1+)}{}
+%\cvitemwithcomment{German}{native speaker}{}
+
+%\fi
+
+
+\iffalse
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Unity Grenoble}{}
+\date{December 06, 2020}
+\opening{Dear Unity Grenoble,}
+\closing{Sincerely,}
+%\enclosure[Anlagen]{}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+I'm thrilled to be applying for the graphics research intern position at Unity Grenoble. 
+
+
+I'm currently studying at the masters level at the Karlsruher Institute of Technology focusing on computer graphics, physics and computer architecture. I have done projects on real-time rendering as well as offline rendering using physical based light transport simulations. I am very interested in the physical properties of light transport, and general physics theories. 
+
+Duties at my previous company included working on the IFCExplorer, a large software project to visualize and analyise semantical data in the field of building information modeling. I worked on the graphics engine written with old OpenGL and optimized it with new techniques, like fragment-based shading and shadow-mapping, and introduces new features, like virtual reality with openVR. 
+
+In my freetime I like to work on personal software or hardware projects, to get a deeper understanding about computers and computation. Also I'm a passionate marathon runner and triathlet and like to challenge myself with big goals, achieving them with a calm attitude taking one step at a time. 
+
+I'm available for the internship from July to October and would preferre to do it over remote, due to the current covid situation. 
+
+Thank you for spending time reviewing my application. I'm extremly motivated to join your company for an internship, and look forward to discussing my candidacy in an interview.
+
+\makeletterclosing
+\fi
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
